@@ -203,5 +203,23 @@ void mousePressed() {
     && (selectionA == 2)) {
     score += 1;
   }
+  
+    if ((mouseX >= margin && mouseX <= widthX + margin) 
+    &&(mouseY >= marginY + heightY + margin && mouseY <= marginY + 2*heightY + margin)
+    && (selectionA == 3)) {
+    score += 1;
+  }
+  if ((mouseX >= 2*margin + widthX)
+    && (mouseX <= 2 * (widthX + margin))
+    &&(mouseY >= marginY + heightY + margin && mouseY <= marginY + 2*heightY + margin)
+    && (selectionA == 4)) {
+    score += 1;
+  }
+  if ((mouseX >= 2*margin + 2*widthX + margin)
+    && (mouseX <= 3 * (widthX + margin))
+   &&(mouseY >= marginY + heightY + margin && mouseY <= marginY + 2*heightY + margin)
+    && (selectionA == 5)) {
+    score += 1;
+  }
 }//generarlo para cada foto 9 en total
 
