@@ -4,20 +4,23 @@
 ///////////////////////
 int h = 0; //variable global indice del sistemas de eleccion, 
 int score;
+/////////////////////////////////////////////////
 //botones activan aleatoriamente un sonido
 //RadioButtons r;
 Button b;
 PImage sonar; // no se esta utilizado
 //fin_botones
+/////////////////////////////////////////////////
 
-///////
+/////////////////////////////////////////////////
 int numberOfAnimals = 6; // numero de fotos de animales a mostrar
 int numberIndice = 5; // 0,1,2....
-int numberLoadAnimals = 7; // numero total de fotos donde elegir
+int numberLoadAnimals = 7; // numero total de fotos donde elegir //7 ¿esta bien?
 //eleccion del indice de  fotos/sonidos
 int[] numbers = new int[numberOfAnimals];
+/////////////////////////////////////////////////
 
-////////
+/////////////////////////////////////////////////
 //fotos animales , posiciones
 PImage [] animals;
 int margin = (1024/100)*2;
@@ -31,9 +34,10 @@ float heightY = 169; //alto de cada foto
 float marginY = 100; 
 int selectionA = 0;// ojo lo he cambiado si no le doy un varlor por defecto tiene 0
 int selectionB = 100;// y no funcionaria bien los botones
-
 //fin_fotos
+/////////////////////////////////////////////////
 
+/////////////////////////////////////////////////
 //sonidos de animales
 Maxim maxim;
 AudioPlayer[] sample;
@@ -42,6 +46,7 @@ String[] trackNameList = {
   "4wolf.wav", "5bear.wav", "6buffalo.wav"
 };
 //fin_sonidos de animales
+/////////////////////////////////////////////////
 
 void setup() {
   size(1024, 680);
@@ -51,6 +56,7 @@ void setup() {
   //////fin_posicion botones
   ////////////////////////////////////////////////
 
+/////////////////////////////////////////////////
   //eleccion de fotos/sonidos
   for (int rnd,  h = 0; h <= numberIndice; h++)
   {
@@ -101,6 +107,7 @@ void draw() {
   fill(204);
   noStroke();
   rect(0, 0, 182, 50); // fondo del marcador
+  
   //visualizar botones 
   textSize(14);
   b.display();
@@ -223,3 +230,4 @@ void mousePressed() {
   }
 }//generarlo para cada foto 9 en total
 
+// funcion que tinte la foto si se ha acertado
