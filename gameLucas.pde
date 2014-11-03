@@ -230,4 +230,4 @@ void mousePressed() {
   }
 }//generarlo para cada foto 9 en total
 
-// funcion que tinte la foto si se ha acertado
+// funcion que tinte la foto si se ha acertado, de verde por ejempllo
