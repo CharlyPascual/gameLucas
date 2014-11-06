@@ -1,6 +1,6 @@
 /////////////////////////////////////////////////
 // juego de animales y sonido
-//cpb 17 agosto 2014
+//cpb 17 agosto 2014//
 /////////////////////////////////////////////////
 int h = 0; //variable global indice del sistemas de eleccion, 
 int score;
