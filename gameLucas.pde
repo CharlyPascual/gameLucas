@@ -13,9 +13,9 @@ PImage sonar; // no se esta utilizado
 /////////////////////////////////////////////////
 
 /////////////////////////////////////////////////
-int numberOfAnimals = 6; // numero de fotos de animales a mostrar
-int numberIndice = 5; // 0,1,2....
-int numberLoadAnimals = 7; // numero total de fotos donde elegir //7 ¿esta bien?
+int numberOfAnimals = 9; // numero de fotos de animales a mostrar
+int numberIndice = 8; // 0,1,2....
+int numberLoadAnimals = 9; // numero total de fotos donde elegir //7 ¿esta bien?
 //eleccion del indice de  fotos/sonidos
 int[] numbers = new int[numberOfAnimals];
 /////////////////////////////////////////////////
@@ -43,7 +43,7 @@ Maxim maxim;
 AudioPlayer[] sample;
 String[] trackNameList = {
   "0lion.wav", "1elephant.wav", "2tiger.wav", "3gorila.wav", 
-  "4wolf.wav", "5bear.wav", "6buffalo.wav"
+  "4wolf.wav", "5bear.wav", "6buffalo.wav", "7horse.wav", "8lince.wav"
 };
 //fin_sonidos de animales
 /////////////////////////////////////////////////
@@ -52,7 +52,7 @@ void setup() {
   size(1024, 680);
   ////////////////////////////////////////////////
   //////posicion botones
-  b = new Button("sonido", (int)(widthX+margin*2), margin, 60, 30);
+  b = new Button("SOUND", (int)(widthX+margin*2), margin, 60, 30);
   //////fin_posicion botones
   ////////////////////////////////////////////////
 
@@ -119,7 +119,7 @@ void draw() {
   //visualiza score
   fill(0);
   textSize(28);
-  text("Aciertos: " + score, margin, margin*2);
+  text("SCORE: " + score, margin, margin*2);
 }
 // carga solo una vez las fotos
 void  displayPhoto() {
@@ -178,14 +178,18 @@ void mouseReleased()
       sample[selectionA].cue(0);
       sample[selectionA].play();
       break;
-      //       case 5;
-      //      sample[selectionA].cue(0);
-      //      sample[selectionA].play();
-      //      break;
-      //       case 5;
-      //      sample[selectionA].cue(0);
-      //      sample[selectionA].play();
-      //      break;
+     case 7:
+      sample[selectionA].cue(0);
+      sample[selectionA].play();
+      break;
+     case 8:
+      sample[selectionA].cue(0);
+      sample[selectionA].play();
+      break;
+     case 9:
+      sample[selectionA].cue(0);
+      sample[selectionA].play();
+      break;
     }
   }
 }
@@ -216,16 +220,29 @@ void mousePressed() {
     && (selectionA == 3)) {
     score += 1;
   }
-  if ((mouseX >= 2*margin + widthX)
-    && (mouseX <= 2 * (widthX + margin))
+  if ((mouseX >= 2*margin + widthX) && (mouseX <= 2 * (widthX + margin))
     &&(mouseY >= marginY + heightY + margin && mouseY <= marginY + 2*heightY + margin)
     && (selectionA == 4)) {
     score += 1;
   }
-  if ((mouseX >= 2*margin + 2*widthX + margin)
-    && (mouseX <= 3 * (widthX + margin))
+  if ((mouseX >= 3*margin + 2*widthX)  && (mouseX <= 3 * (widthX + margin))
    &&(mouseY >= marginY + heightY + margin && mouseY <= marginY + 2*heightY + margin)
     && (selectionA == 5)) {
+    score += 1;
+  }/////
+   if ((mouseX >= margin && mouseX <= widthX + margin) 
+    &&(mouseY >= marginY + 2 * (heightY + margin) && mouseY <= marginY + 3*heightY + 2*margin)
+    && (selectionA == 6)) {
+    score += 1;
+  }
+     if ((mouseX >= 2*margin + widthX) && (mouseX <= 2 * (widthX + margin))
+    &&(mouseY >= marginY + 2 * (heightY + margin) && mouseY <= marginY + 3*heightY + 2*margin)
+    && (selectionA == 7)) {
+    score += 1;
+  }
+     if ((mouseX >= 3*margin + 2*widthX) && (mouseX <= 3 * (widthX + margin))
+    &&(mouseY >= marginY + 2 * (heightY + margin) && mouseY <= marginY + 3*heightY + 2*margin)
+    && (selectionA == 8)) {
     score += 1;
   }
 }//generarlo para cada foto 9 en total
